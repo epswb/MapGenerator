@@ -3,6 +3,8 @@ import java.io.FileWriter;
 
 class MapGenerator
 {
+	//MapGenerator v2.0
+	
 	public void generate()
 	{
 		System.out.println("started generating");
