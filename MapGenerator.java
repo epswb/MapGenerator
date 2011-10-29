@@ -10,7 +10,7 @@ class MapGenerator
 		System.out.println("started generating");
 		String save = new String();
 		
-		int oberfl�che = 0, random = 0, treecounter = 0, flowercounter = 0, x = 0, y = 0, sky = 1, dirt = 2, deepdirt = 8, stone = 4, wood = 5, leave = 6, sand = 3, water = 9, sandstone = 10, gravel = 11, koal = 12, iron = 13, gold = 14, diamond = 15, lapislazuli = 16, redstone = 17, dungeon = 18, lava = 19, bedrock = 20, flower = 7;
+		int oberflaeche = 0, random = 0, treecounter = 0, flowercounter = 0, x = 0, y = 0, sky = 1, dirt = 2, deepdirt = 8, stone = 4, wood = 5, leave = 6, sand = 3, water = 9, sandstone = 10, gravel = 11, koal = 12, iron = 13, gold = 14, diamond = 15, lapislazuli = 16, redstone = 17, dungeon = 18, lava = 19, bedrock = 20, flower = 7;
 		int[][] map = new int[100][1000];
 		int randomy;
 		
@@ -34,7 +34,7 @@ class MapGenerator
 		
 		int summe = 0;
 		
-		for (oberfl�che = 0; oberfl�che < 1000; oberfl�che ++)
+		for (oberflaeche = 0; oberflaeche < 1000; oberflaeche ++)
 		{
 			if (summe <= 15 && summe >= -15)
 			{
@@ -56,13 +56,13 @@ class MapGenerator
 			
 			if (summe <= 1)
 			{
-				map[20 + summe][oberfl�che] = dirt;
+				map[20 + summe][oberflaeche] = dirt;
 				treecounter ++;
 				flowercounter ++;
 				
 				for (int a = 21 + summe; a < 100; a ++)
 				{
-					map[a][oberfl�che] = deepdirt;
+					map[a][oberflaeche] = deepdirt;
 				}
 				
 				Strand = false;
@@ -89,13 +89,13 @@ class MapGenerator
 				{
 					if (Sand == true)
 					{
-						map[20 + summe][oberfl�che] = sand;
-						map[21 + summe][oberfl�che] = sand;
-						map[22 + summe][oberfl�che] = sand;
+						map[20 + summe][oberflaeche] = sand;
+						map[21 + summe][oberflaeche] = sand;
+						map[22 + summe][oberflaeche] = sand;
 						
 						for (int a = 23 + summe; a < 100; a ++)
 						{
-							map[a][oberfl�che] = sandstone;
+							map[a][oberflaeche] = sandstone;
 						}
 					}
 					
@@ -103,7 +103,7 @@ class MapGenerator
 					{
 						for (int a = 15 + summe; a < 100; a ++)
 						{
-							map[a][oberfl�che] = gravel;
+							map[a][oberflaeche] = gravel;
 						}
 					}
 				}
@@ -115,16 +115,16 @@ class MapGenerator
 				{
 					int a = 0;
 					
-					for (a = 0; map[a][oberfl�che] != dirt; a ++)
+					for (a = 0; map[a][oberflaeche] != dirt; a ++)
 					{
 						
 					}
 					
 					a --;
 					
-					if (map[a][oberfl�che] != water)
+					if (map[a][oberflaeche] != water)
 					{
-						map[a][oberfl�che] = flower;
+						map[a][oberflaeche] = flower;
 					}
 				}
 				
@@ -135,32 +135,32 @@ class MapGenerator
 			{
 				int a = 0;
 				
-				for (a = 0; map[a][oberfl�che] != dirt; a ++)
+				for (a = 0; map[a][oberflaeche] != dirt; a ++)
 				{
 					
 				}
 				
 				a --;
 				
-				if (map[a][oberfl�che] != water && a > 9)
+				if (map[a][oberflaeche] != water && a > 9)
 				{
 					for (int b = 0; b < 5; b ++)
 					{
-						map[a - b][oberfl�che] = wood;
+						map[a - b][oberflaeche] = wood;
 					}
 					
 					for (int b = 0; b < 3; b ++)
 					{
 						for (int c = 0; c < 5; c ++)
 						{
-							map[a - 5 + b][oberfl�che - 2 + c] = leave;
+							map[a - 5 + b][oberflaeche - 2 + c] = leave;
 						}
 					}
 					
 					for (int b = 0; b < 3; b ++)
 					{
-						map[a - 6][oberfl�che - 1 + b] = leave;
-						map[a - 2][oberfl�che - 1 + b] = leave;
+						map[a - 6][oberflaeche - 1 + b] = leave;
+						map[a - 2][oberflaeche - 1 + b] = leave;
 					}
 					
 				}
@@ -171,7 +171,7 @@ class MapGenerator
 		
 		summe = 0;
 		
-		for (oberfl�che = 0; oberfl�che < 1000; oberfl�che ++)
+		for (oberflaeche = 0; oberflaeche < 1000; oberflaeche ++)
 		{
 			if (summe <= 10 && summe >= -10)
 			{
@@ -193,7 +193,7 @@ class MapGenerator
 			
 			for (int a = summe + 40; a < 100; a ++)
 			{
-				map[a][oberfl�che] = stone;
+				map[a][oberflaeche] = stone;
 			}
 		}
 		
