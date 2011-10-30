@@ -10,7 +10,7 @@ class MapGenerator
 		System.out.println("started generating");
 		String save = new String();
 		
-		int oberflaeche = 0, random = 0, treecounter = 0, flowercounter = 0, x = 0, y = 0, sky = 1, dirt = 2, deepdirt = 8, stone = 4, wood = 5, leave = 6, sand = 3, water = 9, sandstone = 10, gravel = 11, koal = 12, iron = 13, gold = 14, diamond = 15, lapislazuli = 16, redstone = 17, dungeon = 18, lava = 19, bedrock = 20, flower = 7;
+		int oberflaeche = 0, random = 0, treecounter = 0, flowercounter = 0, x = 0, y = 0, sky = 0, dirt = 1, deepdirt = 7, stone = 3, wood = 4, leave = 5, sand = 2, water = 8, sandstone = 9, gravel = 10, koal = 11, iron = 12, gold = 13, diamond = 14, lapislazuli = 15, redstone = 16, dungeon = 17, lava = 18, bedrock = 19, flower = 6;
 		int[][] map = new int[100][1000];
 		int randomy;
 		
@@ -332,7 +332,7 @@ class MapGenerator
 				save = save + String.valueOf(map[a][b]) + " ";
 			}
 			
-			save = save + ("0" + "\n");
+			save = save + ("-1" + "\n");
 		}
 		
 		System.out.println("write");
